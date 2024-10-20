@@ -23,13 +23,12 @@ The Rule Engine with Abstract Syntax Tree (AST) is a simple 3-tier application d
 
 ## Setup
 
-1. **Clone the Repository**
+1.**Clone the Repository**
 
    ```powershell
    git clone https://github.com/TinkerWizard/Rule-Engine-With-AST.git
    cd Rule-Engine-With-AST
    ```
-
 2.**Install Dependencies**
 
 ```powershell
