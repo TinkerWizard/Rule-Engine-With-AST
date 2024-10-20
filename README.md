@@ -6,10 +6,10 @@ The Rule Engine with Abstract Syntax Tree (AST) is a simple 3-tier application d
 
 ## Features
 
-- **Rule Creation:** Define rules using a simple string format.
+- **Rule Creation and Modification:** Define rules using a simple string format and edit existing rules.
+- **Combine Multiple Rules:** Combine rules into a single rule.
 - **Rule Evaluation:** Evaluate rules against JSON data.
 - **API Endpoints:** Expose functionality through RESTful APIs.
-- **Static UI:** Basic user interface to submit rules and data for evaluation.
 
 ## Technology Stack and Features
 
