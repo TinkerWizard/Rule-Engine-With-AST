@@ -71,11 +71,13 @@ npm run dev
 
 ## API Endpoints
 
-#### Create Rule
+#### Create / Modify Rule
 
 - **URL:** `/save`
 - **Method:** `POST`
-- **Description:** This endpoint allows users to create a new rule by providing a rule string and generates the AST.
+- **Description:** This endpoint allows users to create a new rule by providing a rule string and generates the AST. Also, we can modify the exisiting rules. We fetch those rules from the database.
+![Create and Modify](./images/create-modify.png)
+![Invalid rule](./images/error-handling.png)
 
 - **Request Body:**
 
@@ -152,6 +154,7 @@ npm run dev
 - **URL:** `/combine`
 - **Method:** `POST`
 - **Description:** This endpoint allows users to create a combine rules by providing a multiple rule string and generates the AST.
+![Combine rules](./images/combine.png)
 
 - **Request Body:**
 
@@ -209,7 +212,9 @@ npm run dev
 - **URL:** `/evaluate`
 - **Method:** `POST`
 - - **Description:** This endpoint allows users to evaluate a rule by providing a multiple rule string and it returns either true or false.
-- **Body:**
+![Evaluate rules](./images/evaluate.png)
+
+- **Request Body:**
 
   ```json
   {
@@ -231,3 +236,4 @@ npm run dev
 ## Performance
 
 - **Performance:** Consider optimizing rule evaluation logic for large datasets.
+- **Error Handling** Invalid rules are not processed and not saved in the database.

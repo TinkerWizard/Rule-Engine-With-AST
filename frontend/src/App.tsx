@@ -6,6 +6,7 @@ function App() {
   const [rule, setRule] = useState<string>('');
   const [rule1, setRule1] = useState<string>('');
   const [rule2, setRule2] = useState<string>('');
+  const [ruleError, setRuleError] = useState<string>('');
   const [view, setView] = useState<string>('Create');
   const [genereateAST, setGeneratedAST] = useState('');
   const [generatedCombinedAST, setGeneratedCombinedAST] = useState('');
@@ -25,6 +26,9 @@ function App() {
     const data = await response.json();
     if (response.ok) {
       setGeneratedAST(data.ast);
+    }
+    if (response.status === 400) {
+      setRuleError(data.detail);
     }
   }
   const handleCombineRuleClick = async () => {
@@ -172,6 +176,7 @@ function App() {
               value={rule}
               fullWidth
             />
+            <p className='text-danger'>{ruleError}</p>
             <Button variant="contained" color="primary" onClick={handleCreateRuleClick}>
               Create Rule
             </Button>
