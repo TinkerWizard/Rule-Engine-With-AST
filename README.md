@@ -21,7 +21,7 @@ The Rule Engine with Abstract Syntax Tree (AST) is a simple 3-tier application d
   - 💻 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
   - 🎨 [Material UI](https://mui.com/material-ui/) for the frontend components.
 
-### Setup
+## Setup
 
 1. **Clone the Repository**
 
@@ -71,10 +71,6 @@ npm run dev
 ```
 
 ## API Endpoints
-
-### **Create Rule**
-
-### API Endpoints
 
 #### Create Rule
 
