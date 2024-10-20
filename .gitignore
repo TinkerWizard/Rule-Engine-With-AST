@@ -1,0 +1,11 @@
+.vscode
+backend/__pycache__
+backend/.venv
+backend/.env
+backend/api/__pycache__
+backend/api/config/__pycache__
+backend/api/models/__pycache__
+backend/api/routes/__pycache__
+backend/api/schemas/__pycache__
+backend/api/utilities/__pycache__
+frontend/node_modules
