@@ -83,8 +83,3 @@ def combine_multiple_rules(rules: CombineRulesInput):
         status_code=200,
         content={"message": "Rule combined successfully", 'ast': json_text}
     )
-    
-@router.get("/app.js")
-async def serve_js():
-    file_path = os.path.join("static", "app.js")    
-    return FileResponse(file_path, media_type='application/javascript')
