@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Box, Button, ButtonGroup, FormControl, FormControlLabel, FormHelperText, FormLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, Stack, TextField } from '@mui/material';
+import { Box, Button, ButtonGroup, FormControl, FormControlLabel, FormLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, Stack, TextField } from '@mui/material';
 
 function App() {
   const [rule, setRule] = useState<string>('');
   const [rule1, setRule1] = useState<string>('');
   const [rule2, setRule2] = useState<string>('');
-  const [ruleError, setRuleError] = useState<string>('');
   const [view, setView] = useState<string>('Create');
   const [genereateAST, setGeneratedAST] = useState('');
   const [generatedCombinedAST, setGeneratedCombinedAST] = useState('');
@@ -171,12 +170,8 @@ function App() {
               variant="outlined"
               onChange={handleRuleChange}
               value={rule}
-              error={Boolean(ruleError)}
               fullWidth
             />
-            <p className="text-danger">
-              {ruleError}
-            </p>
             <Button variant="contained" color="primary" onClick={handleCreateRuleClick}>
               Create Rule
             </Button>
@@ -204,7 +199,6 @@ function App() {
                   variant="outlined"
                   onChange={handleRule1Change}
                   value={rule1}
-                  error={Boolean(ruleError)}
                   fullWidth
                 />
                 <TextField
@@ -212,7 +206,6 @@ function App() {
                   variant="outlined"
                   onChange={handleRule2Change}
                   value={rule2}
-                  error={Boolean(ruleError)}
                   fullWidth
                 />
               </Stack>
@@ -241,7 +234,6 @@ function App() {
                 value={generatedCombinedAST}
                 fullWidth
               />
-              {/* {genereateAST} */}
             </div>
           </div>
         }
